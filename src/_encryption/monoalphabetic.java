@@ -19,14 +19,16 @@ public class monoalphabetic {
             char originalChar = originalAlphabet.get(i);
             char shuffledChar = shuffledAlphabet.get(i);
             cipherMap.put(originalChar, shuffledChar);
+            cipherMap.put(Character.toLowerCase(originalChar), Character.toLowerCase(shuffledChar));
             reverseCipherMap.put(shuffledChar, originalChar);
+            reverseCipherMap.put(Character.toLowerCase(shuffledChar), Character.toLowerCase(originalChar));
         }
     }
 
     public static String encrypt(String input) {
         StringBuilder encrypted = new StringBuilder();
         for (char c : input.toCharArray()) {
-            if (Character.isUpperCase(c)) {
+            if (cipherMap.containsKey(c)) {
                 encrypted.append(cipherMap.get(c));
             } else {
                 encrypted.append(c);
@@ -44,6 +46,6 @@ public class monoalphabetic {
                 decrypted.append(c);
             }
         }
-        return decrypted.toString().toLowerCase();
+        return decrypted.toString();
     }
 }
