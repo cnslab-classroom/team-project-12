@@ -5,10 +5,10 @@ public class scytale {
 
     public static char randomVal() {
         Random r = new Random();
-        return (char) (r.nextInt(26) + 'a'); // Fix: Ensure random letters cover a-z
+        return (char) (r.nextInt(26) + 'a');
     }
 
-    public static String encryptScytale(String key) {
+    public static String encrypt(String key) {
     	int thickness=4;
         StringBuilder encrypted = new StringBuilder();
         for (int i = 0; i < key.length(); i++) {
@@ -20,10 +20,10 @@ public class scytale {
         return encrypted.toString();
     }
 
-    public static String decryptScytale(String pass) {
+    public static String decrypt(String pass) {
     	int thickness=4;
         StringBuilder decrypted = new StringBuilder();
-        for (int i = 0; i < pass.length(); i += (thickness + 1)) { // Skip random characters
+        for (int i = 0; i < pass.length(); i += (thickness + 1)) {
             decrypted.append(pass.charAt(i));
         }
         return decrypted.toString();
