@@ -143,19 +143,19 @@ public class Portal extends JFrame {
 
     private String encryptPassword(String password) {
         String encrypted = password;
-        encrypted = scytale.encryptScytale(encrypted);
+        encrypted = scytale.encrypt(encrypted);
         encrypted = monoalphabetic.encrypt(encrypted);
-        encrypted = character_substitution.encryptCharacterSubstitution(encrypted);
-        encrypted = caesar.encryptCaesar(encrypted);
+        encrypted = character_substitution.encrypt(encrypted);
+        encrypted = caesar.encrypt(encrypted);
         return encrypted;
     }
 
     private String decryptPassword(String encryptedPassword) {
         String decrypted = encryptedPassword;
-        decrypted = scytale.decryptScytale(decrypted);
+        decrypted = scytale.decrypt(decrypted);
         decrypted = monoalphabetic.decrypt(decrypted);
-        decrypted = character_substitution.decryptCharacterSubstitution(decrypted);
-        decrypted = caesar.decryptCaesar(decrypted);
+        decrypted = character_substitution.decrypt(decrypted);
+        decrypted = caesar.decrypt(decrypted);
         return decrypted;
     }
 
