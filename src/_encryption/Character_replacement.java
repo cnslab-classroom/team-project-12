@@ -1,4 +1,4 @@
-package persp_12;
+package _encryption;
 
 import java.io.*;
 import java.util.*;
@@ -141,13 +141,4 @@ public class Character_replacement {
         return decrypted.toString();
     }
 
-    public static void main(String[] args) {
-        String plaintext = "a2b890efg";
-        String encrypted = encrypt(plaintext);
-        String decrypted = decrypt(encrypted);
-
-        System.out.println("Plaintext: " + plaintext);
-        System.out.println("Encrypted: " + encrypted);
-        System.out.println("Decrypted: " + decrypted);
-    }
 }

@@ -9,7 +9,7 @@ public class scytale {
     }
 
     public static String encrypt(String key) {
-    	int thickness=4;
+        int thickness=4;
         StringBuilder encrypted = new StringBuilder();
         for (int i = 0; i < key.length(); i++) {
             encrypted.append(key.charAt(i));
