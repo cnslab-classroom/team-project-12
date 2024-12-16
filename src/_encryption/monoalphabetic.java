@@ -20,7 +20,7 @@ public class monoalphabetic {
             char originalChar = originalAlphabet.get(i);
             char shuffledChar = shuffledAlphabet.get(i);
             cipherMap.put(originalChar, shuffledChar);
-            reverseCipherMap.put(shuffledChar, originalChar); // 복호화 맵 생성
+            reverseCipherMap.put(shuffledChar, originalChar);
         }
     }
 
@@ -42,9 +42,9 @@ public class monoalphabetic {
             if (reverseCipherMap.containsKey(c)) {
                 decrypted.append(reverseCipherMap.get(c));
             } else {
-                decrypted.append(c); // 공백 및 기타 문자는 그대로 유지
+                decrypted.append(c);
             }
         }
-        return decrypted.toString().toLowerCase(); // 소문자로 변환
+        return decrypted.toString().toLowerCase();
     }
 }
