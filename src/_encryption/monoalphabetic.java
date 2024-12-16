@@ -1,6 +1,5 @@
 package _encryption;
 import java.util.*;
-
 public class monoalphabetic {
 
     private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
